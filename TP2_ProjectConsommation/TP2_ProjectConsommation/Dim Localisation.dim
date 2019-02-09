@@ -1,0 +1,322 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d63415df-bffc-4c1e-a79d-d17bfdfd924b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Localisation</ID>
+  <Name>Localisation</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2584" scrolltop="-4420" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8255" y="15558" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimLocalisation" left="-86" top="2104" logicalid="4" controlid="1" masterid="0" hint1="0" hint2="0" width="3620" height="3387" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000240e00003b0d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimLocalisation" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimProprietaire" left="-85" top="-1609" logicalid="5" controlid="2" masterid="0" hint1="0" hint2="0" width="3747" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000a30e000034060000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimProprietaire" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-261" top="-520" logicalid="6" controlid="3" masterid="0" hint1="0" hint2="0" width="3385" height="2924" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_DimLocalisation_DimProprietaire]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="1" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="138" y="-21" />
+              <point x="138" y="1370" />
+              <point x="2824" y="1370" />
+              <point x="2824" y="2104" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2584</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4420</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-86</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-1609</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="190">
+            <Shape Id="Localisation PK" Expanded="true">
+              <Attributes>
+                <Attribute Id="Localisation PK" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Local" Expanded="false">
+              <Attributes>
+                <Attribute Id="Local" />
+              </Attributes>
+              <Position x="262" y="20" />
+            </Shape>
+            <Shape Id="Code Batiment" Expanded="true">
+              <Attributes>
+                <Attribute Id="Code Batiment" />
+                <Attribute Id="Occupants Batiment" />
+              </Attributes>
+              <Position x="505" y="20" />
+            </Shape>
+            <Shape Id="Proprietaire PK" Expanded="false">
+              <Attributes>
+                <Attribute Id="Proprietaire PK" />
+              </Attributes>
+              <Position x="262" y="94" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="4fefca53-842a-4267-9617-e331dfcd28a3">
+    <DataSourceViewID>Consommation Tables</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="af8b559e-f0ff-4440-a934-73ecdce177b6">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="2cd7d5d5-ec60-4b73-87c8-6969674e24bb">
+      <ID>Localisation PK</ID>
+      <Name>Machine</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1bd25f68-4310-4e1b-95d8-18508b076e6e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4567e9ea-9662-46d6-bd13-7445c6d99ab1">
+            <TableID>dbo_DimLocalisation</TableID>
+            <ColumnID>localisation_PK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c526ef79-fb0f-4d4f-b45f-af046a90ea3c">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="534b0b7f-9ce1-4e17-8661-859fb220afda">
+          <TableID>dbo_DimLocalisation</TableID>
+          <ColumnID>codeMachine</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="681fc436-9a30-4424-a720-4d879ceefba9">
+          <AttributeID>Proprietaire PK</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Proprietaire</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="12e2b117-6e12-4957-be8e-79aa0cc15827">
+          <AttributeID>Local</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Local</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="50f2f44a-df36-4f44-915c-5f714858b660">
+      <ID>Proprietaire PK</ID>
+      <Name>Proprietaire</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bd0f6663-1927-435b-a28e-0758dad32f08">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6d0131c0-cf98-48eb-b320-3992af7cb743">
+            <TableID>dbo_DimProprietaire</TableID>
+            <ColumnID>proprietaire_PK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="8a1ea2e5-cc18-471f-96ce-3f5f13f1d96d">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="fc09f9fd-9da1-4386-a301-316121fd1126">
+          <TableID>dbo_DimProprietaire</TableID>
+          <ColumnID>proprietaireMachine</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5f3f2d74-9c4d-40ac-92e3-89ccc9b477b4">
+      <ID>Local</ID>
+      <Name>Local</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="837eae0b-6f8d-4e01-917b-a01b495b32e8">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e2486679-3c3e-4e33-abd7-afdaa9d46f87">
+            <TableID>dbo_DimLocalisation</TableID>
+            <ColumnID>local</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="aad42ccc-b5c5-44ef-b743-bd22952cd964">
+          <AttributeID>Code Batiment</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Batiment</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3a34a628-e967-4529-ab28-2c8261fb2418">
+      <ID>Code Batiment</ID>
+      <Name>Batiment</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4cd0d6c6-e59a-451e-b877-2877968e0225">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9928dfc6-e09b-4daf-942e-ad5f6ac08cc9">
+            <TableID>dbo_DimLocalisation</TableID>
+            <ColumnID>codeBatiment</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="a8d5669b-194a-428c-af3f-e09492c769d0">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4b3cd662-b23f-40da-a6d8-619942ad49cc">
+          <TableID>dbo_DimLocalisation</TableID>
+          <ColumnID>libelleBatiment</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="7dc89fee-0ea3-4534-92a2-0abcf2ea9a4e">
+          <AttributeID>Occupants Batiment</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Occupants Batiment</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e6885d6f-4958-4d71-8093-7949ce8ee206">
+      <ID>Occupants Batiment</ID>
+      <Name>Occupants Batiment</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aa616914-0424-484c-a73c-d256698030bd">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6f3774f0-7817-4f7b-b6e0-547f09447a09">
+            <TableID>dbo_DimLocalisation</TableID>
+            <ColumnID>occupantsBatiment</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="07927e71-5571-4388-848b-72bbef8c3908">
+      <ID>Hierarchy</ID>
+      <Name>HierarchyLocalisation</Name>
+      <Levels>
+        <Level dwd:design-time-name="488096c2-7623-42ff-8c95-e95aca2406de">
+          <ID>Batiment</ID>
+          <Name>Batiment</Name>
+          <SourceAttributeID>Code Batiment</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="900efd3f-d17c-4eff-809b-7100e2e8b8d8">
+          <ID>Local</ID>
+          <Name>Local</Name>
+          <SourceAttributeID>Local</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="441f4bf3-186b-40d1-b699-e9a5171cfa24">
+          <ID>Machine</ID>
+          <Name>Machine</Name>
+          <SourceAttributeID>Localisation PK</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="c2a21f28-14a6-499c-9d23-7937c137bbab">
+      <ID>Hierarchy 1</ID>
+      <Name>HierarchyProprietaire</Name>
+      <Levels>
+        <Level dwd:design-time-name="f0375507-4d2a-48a0-807a-eeb765c889a7">
+          <ID>Proprietaire</ID>
+          <Name>Proprietaire</Name>
+          <SourceAttributeID>Proprietaire PK</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b2cc4435-908d-41aa-aac0-983a8498cc0d">
+          <ID>Machine</ID>
+          <Name>Machine</Name>
+          <SourceAttributeID>Localisation PK</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

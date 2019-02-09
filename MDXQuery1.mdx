@@ -1,0 +1,89 @@
+-----------R0-------------------
+select {[Measures].[Nb Cafe]} on columns,
+{[Temps].[HierarchyMois].members} on rows
+from [ConsommationCube];
+-------------R1-------------------
+select {[Measures].members} on columns,
+{[Temps].[HierarchyMois].[Annee].members} on rows
+from [ConsommationCube];
+---------------R2--------------------
+select {crossjoin([Measures].[Nb Cafe],[Localisation].[HierarchyLocalisation].[Batiment].members)} on columns,
+{[Temps].[HierarchyMois].[Annee].members} on rows
+from [ConsommationCube];
+--ou
+select {[Localisation].[HierarchyLocalisation].[Batiment]} on columns,
+{[Temps].[HierarchyMois].[Annee]} on rows
+from [ConsommationCube]
+where [Measures].[Nb Cafe];
+
+------------R3------------------------
+select {[Localisation].[HierarchyLocalisation].[Batiment]} on columns,
+{[Temps].[HierarchyMois].[Annee]} on rows
+from [ConsommationCube]
+where [Measures].[Nb Chocolat]; 
+-------------R4---------------------------
+select {[Temps].[HierarchyMois].[Annee]} on columns,
+{[Localisation].[HierarchyLocalisation].[Batiment].&[1].children} on rows
+from [ConsommationCube]
+where [Measures].[Nb Cafe];
+--------------R5---------------------
+select [Localisation].[HierarchyLocalisation].[Local].&[salle caf¨¦ IF] on columns,
+[Temps].[HierarchyMois].[Annee] on rows
+from [ConsommationCube]
+where [Measures].[Nb Cafe];
+-------------R6----------------------
+select [Measures] on columns,
+{[Temps].[HierarchyMois].[Mois].&[201701],[Temps].[HierarchyMois].[Mois].&[201801]} on rows
+from [ConsommationCube]
+where [Client].[HierarchyClient].[Client].&[3];
+--------------R7--------------------
+select [Localisation].[HierarchyLocalisation].[Batiment] on columns,
+[Temps].[HierarchyMois].[Annee].&[2018].children on rows
+from [ConsommationCube]
+where [Measures].[Nb Cafe];
+-------------R8-------------------????
+with member [Measures].[M]
+as ([Measures].[Nb Cafe],[Temps].[HierarchyMois].CurrentMember) - ([Measures].[Nb Cafe],[Temps].[HierarchyMois].PrevMember)
+select {[Measures].[Nb Cafe],[Measures].[M]} on columns,
+{[Temps].[HierarchyMois].members} on rows
+from [ConsommationCube];
+--ou
+with member [Measures].[M]
+as [Measures].[Nb Cafe] - ([Measures].[Nb Cafe],[Temps].[HierarchyMois].PrevMember)
+select {[Measures].[Nb Cafe],[Measures].[M]} on columns,
+{[Temps].[HierarchyMois].members} on rows
+from [ConsommationCube];
+--ou
+with member [Measures].[M]
+as [Measures].[Nb Cafe] - ([Measures].[Nb Cafe],[Temps].[HierarchyMois].CurrentMember.PrevMember)
+select {[Measures].[Nb Cafe],[Measures].[M]} on columns,
+{[Temps].[HierarchyMois].members} on rows
+from [ConsommationCube];
+
+------------R9------------------
+select crossjoin([Measures].members,[Temps].[HierarchyMois].[Annee].members) on columns,
+[Localisation].[HierarchyLocalisation].members on rows
+from [ConsommationCube];
+-------------R10------------
+SELECT TopCount([Temps].[HierarchySemaine].[Nom Jour], 7, [Measures].[Nb Cafe]) ON ROWS,
+{[Measures].[Nb Cafe]} ON COLUMNS
+FROM [ConsommationCube];
+-------------R11------------
+SELECT TopCount({[Temps].[HierarchySemaine].[Nom Jour]},7,[Measures].[Nb Chocolat]) ON ROWS,
+{[Measures].[Nb Chocolat]} ON COLUMNS
+FROM [ConsommationCube];
+------------R12-------------
+select [Localisation].[HierarchyProprietaire].[Proprietaire] on columns,
+[Temps].[HierarchyMois].[Annee] on rows
+from [ConsommationCube]
+where [Measures].[Nb Chocolat];
+
+SELECT {[Temps].[HierarchyMois].[Mois].&[201701],[Temps].[HierarchyMois].[Mois].&[201801]} ON COLUMNS,
+{[Measures].[Nb Chocolat],[Measures].[Nb Cafe]} ON ROWS
+FROM [ConsommationCube]
+WHERE ([Client].[HierarchyClient].[Client].&[3]);
+
+SELECT {[Temps].[HierarchyMois].[Mois].&[201701],[Temps].[HierarchyMois].[Mois].&[201801]} ON COLUMNS,
+{[Measures].[Nb Chocolat],[Measures].[Nb Cafe]} ON ROWS
+FROM [ConsommationCube]
+WHERE ([Client].[HierarchyClient].[Client].[Adam F.])
